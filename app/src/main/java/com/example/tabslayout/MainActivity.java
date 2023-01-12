@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         keterangan = findViewById(R.id.keterangan);
         spinner = findViewById(R.id.label_spinner);
 
-//        spinner di xml
         if(spinner != null) {
             spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
@@ -49,12 +48,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         adapter = ArrayAdapter.createFromResource(this, R.array.label_array, android.R.layout.simple_spinner_item); //label yg ditampilkan di spinner
         spinner.setAdapter(adapter);
 
-//        spinner di main act
         if(spinner != null) {
             spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
         }
 
-//        menampilkan alert dialog
+
         btnSubmit = findViewById(R.id.btn_submit);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,22 +78,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         });
     }
 
-    //    function menampilkan date-picker
     public void showDatePicker() {
         DialogFragment dateFragment = new DatePickerFragment();
         dateFragment.show(getSupportFragmentManager(), "date-picker");
     }
 
-    //    function menampilkan time-picker
+
     public void showTimePicker() {
         DialogFragment dateFragment = new TimePickerFragment();
         dateFragment.show(getSupportFragmentManager(), "time-picker");
     }
 
-
-
-
-    //    action ketika button di klik
     public void showAlertDialog() {
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(MainActivity.this);
         alertBuilder.setTitle("Konfirmasi");
@@ -122,11 +115,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         });
 
-//        menampilkan function alertBuilder
         alertBuilder.show();
     }
 
-    //    method menampilkan tangggal
     public void processDatePickerResult(int day, int month, int year) {
         String day_string = Integer.toString(day);
         String month_string = Integer.toString(month+1);
@@ -136,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         tanggal.setText(dateMessage);
     }
 
-    //    method menampilkan waktu
+
     public void processTimePickerResult(int hour, int minute) {
         String hour_string = Integer.toString(hour);
         String minute_string = Integer.toString(minute);
@@ -145,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         waktu.setText(timeMessage);
     }
 
-    //    ketika spinner di klik
+    
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         if (spinner.getSelectedItem().toString().equals("Hadir Tepat Waktu")) {
