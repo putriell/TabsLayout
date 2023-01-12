@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         });
 
-//        menampilkan date-picker
         tanggal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,7 +68,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         });
 
-//    menampilkan time-picker
         waktu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
