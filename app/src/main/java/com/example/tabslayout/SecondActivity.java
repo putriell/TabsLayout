@@ -24,8 +24,6 @@ public class SecondActivity extends AppCompatActivity {
         SampleAdaptor adaptor = new SampleAdaptor(getSupportFragmentManager(), getLifecycle());
         pager2.setAdapter(adaptor);
 
-//        menempelkan tab
-//        kondisi dimana default masuk kemudian daftar
         mediator = new TabLayoutMediator(tabLayout, pager2, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
@@ -38,7 +36,7 @@ public class SecondActivity extends AppCompatActivity {
         });
         mediator.attach();
     }
-    //  ketika klik button masuk akan diarahkan ke absensiManual1
+ 
     public void showActivity(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
