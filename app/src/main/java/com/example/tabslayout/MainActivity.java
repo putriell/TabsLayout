@@ -52,15 +52,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
         }
 
-
-        btnSubmit = findViewById(R.id.btn_submit);
-        btnSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showAlertDialog();
-            }
-        });
-
         tanggal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,6 +63,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View view) {
                 showTimePicker();
+            }
+        });
+        
+        btnSubmit = findViewById(R.id.btn_submit);
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showAlertDialog();
             }
         });
     }
