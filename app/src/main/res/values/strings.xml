@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TabsLayout</string>
+    <string-array name="label_array">
+        <item>Hadir Tepat Waktu</item>
+        <item>Terlambat</item>
+        <item>Ijin</item>
+        <item>Sakit</item>
+    </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
